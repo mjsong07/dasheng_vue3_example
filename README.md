@@ -28,3 +28,13 @@ npm install -D prettier eslint-plugin-prettier @vue/eslint-config-prettier
 ```
 
 
+## unit test
+https://github.com/vuejs/vue-test-utils-next
+
+``` 
+npm install -D jest vue-jest@next @vue/test-utils@next 
+npm install -D babel-jest @babel/core @babel/preset-env 
+npm install -D ts-jest @babel/preset-typescript @types/jest
+
+
+```
