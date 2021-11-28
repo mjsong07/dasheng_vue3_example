@@ -38,7 +38,6 @@ body{
 .el-footer {
   background-color: #b3c0d1;
   color: #333;
-<<<<<<< HEAD
   text-align: center;
   line-height: 60px;
 }
@@ -54,23 +53,6 @@ body{
   background-color: #e9eef3;
   color: #333;
   text-align: center;
-=======
-  text-align: center;
-  line-height: 60px;
-}
-
-.el-aside {
-  background-color: #d3dce6;
-  color: #333;
-  text-align: center;
-  line-height: 200px;
-}
-
-.el-main {
-  background-color: #e9eef3;
-  color: #333;
-  text-align: center;
->>>>>>> 8902877cf3e7361da0c9aa78d6b6f4b0b344d431
   line-height: 160px;
 }
 
