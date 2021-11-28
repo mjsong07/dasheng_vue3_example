@@ -4,16 +4,22 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "lint":"eslint --fix --ext .js,vue src/"
   },
   "dependencies": {
     "vue": "^3.2.16"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
     "@vitejs/plugin-vue": "^1.9.3",
+    "@vue/eslint-config-typescript": "^9.1.0",
     "chalk": "^5.0.0",
+    "eslint": "^8.3.0",
+    "eslint-plugin-vue": "^8.1.1",
     "husky": "^7.0.4",
-    "typescript": "^4.4.3",
+    "typescript": "^4.5.2",
     "vite": "^2.6.4",
     "vue-tsc": "^0.3.0"
   }
