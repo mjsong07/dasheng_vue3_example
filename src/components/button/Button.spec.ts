@@ -8,7 +8,7 @@ describe('按钮测试', () => {
         default: content
       }
     })
-    expect(wrapper.text()).toContain(content)
+    expect(wrapper.text()).toBe(content)
   })
 
   it('通过size属性控制大小', () => {

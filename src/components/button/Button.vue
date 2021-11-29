@@ -69,7 +69,7 @@ const buttonSize = computed(()=>{
     border-color: mix($--color-white,$--color-primary,70%);
     background-color: mix($--color-white,$--color-primary,90%);
   }
-    @include m(medium) {
+  @include m(medium) {
     @include button-size(
       $--button-medium-padding-vertical,
       $--button-medium-padding-horizontal,

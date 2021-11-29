@@ -133,14 +133,7 @@ $--button-large-padding-horizontal: 25px !default;
     @content;
   }
 }
-// add class
-@mixin when($state) {
-  @at-root {
-    &.#{$state-prefix + $state} {
-      @content;
-    }
-  }
-}
+
 // 添加ben后缀 el-button-state size啥的
 @mixin when($state) {
   @at-root {
