@@ -1,11 +1,13 @@
 <template>
- <button class="el-button" 
- :class="[
-  buttonSize ? `el-button--${buttonSize}` : '',
-  type ? `el-button--${type}` : ''
-  ]">
-      <slot></slot>
- </button>
+  <button
+    class="el-button" 
+    :class="[
+      buttonSize ? `el-button--${buttonSize}` : '',
+      type ? `el-button--${type}` : ''
+    ]"
+  >
+    <slot />
+  </button>
 </template>
 
 <script lang="ts">
