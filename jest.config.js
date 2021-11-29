@@ -6,4 +6,6 @@ module.exports = {
     '^.+\\.tsx?$': 'ts-jest', // ts-jest 处理.ts .tsx
   },
   testMatch: ['**/?(*.)+(spec).[jt]s?(x)'],
+  "collectCoverage": true,
+  "coverageReporters": ["json", "html"],
 }
