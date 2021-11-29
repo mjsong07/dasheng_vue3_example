@@ -1,6 +1,11 @@
 
 
 <template>
+<el-button type="primary">按钮</el-button>
+<el-button type="success">按钮</el-button>
+<el-button>按钮</el-button>
+<el-button size="small">按钮</el-button>
+<hr/>
   <el-container>
     <el-aside width="200px">
       Aside
@@ -25,8 +30,10 @@
       </el-container>
     </el-container>
   </el-container>
+  
 </template>
 <script setup lang="ts">
+import ElButton from './components/button/Button.vue'
 </script>
 <style>
 
