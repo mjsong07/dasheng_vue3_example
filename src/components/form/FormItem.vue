@@ -44,7 +44,6 @@ defineExpose(o)
 
 onMounted(() => {
   if (props.prop) {
-    console.log("addFormItem", o)
     emitter.on("validate", () => {
       validate()
     })
