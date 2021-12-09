@@ -27,10 +27,13 @@ withDefaults(defineProps<Props>(),{
 
 <style lang="scss">
 @import '../styles/mixin';
-@include b(footer) {
+@include b(input) {
   padding: $--footer-padding;
   box-sizing: border-box;
   flex-shrink: 0;
+  @include m(inner){
+    width:300px;
+  }
 }
 
 </style>

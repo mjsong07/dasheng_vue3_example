@@ -7,9 +7,11 @@
     "serve": "vite preview",
     "lint": "eslint --fix --ext .js,vue src/",
     "test": "jest",
-    "test:w":"jest --watchAll"
+    "test:w": "jest --watchAll"
   },
   "dependencies": {
+    "async-validator": "^4.0.7",
+    "mitt": "^3.0.0",
     "vue": "^3.2.16"
   },
   "devDependencies": {

@@ -1,47 +1,154 @@
 
 
 <template>
-  <el-button type="primary">
-    按钮
-  </el-button>
-  <el-button type="success">
-    按钮
-  </el-button>
-  <el-button>按钮</el-button>
-  <el-button size="small">
-    按钮
-  </el-button>
-  <hr>
-  <el-container>
-    <el-header>Header</el-header>
-    <el-main>Main</el-main>
-    <el-footer>Footer</el-footer>
-  </el-container>
-  <hr>
+  <div>
+    <el-button
+      v-for="example in compExamples"
+      :key="example"
+      :type="comp==example?'success':'primary'"
+      @click="comp=example"
+    >
+      {{ example }}
+    </el-button>
+  </div>
 
-  <el-container>
-    <el-header>Header</el-header>
-    <el-container>
-      <el-aside width="200px">
-        Aside
-      </el-aside>
-      <el-main>Main</el-main>
-    </el-container>
-  </el-container>
-  <hr>
-  <el-container>
-    <el-aside width="200px">
-      Aside
-    </el-aside>
+  <div v-if="comp=='form'">
+    <el-form
+      ref="myForm"
+      :model="model"
+      :rules="rules"
+    >
+      <el-form-item
+        label="用户名："
+        prop="username"
+      >
+        <el-input v-model="model.username" />
+      </el-form-item>
+      <el-form-item
+        label="密码："
+        prop="password"
+      >
+        <el-input
+          v-model="model.password"
+          type="password"
+        />
+      </el-form-item>
+      <br>
+      <el-form-item>
+        <el-button
+          type="primary"
+          @click="login"
+        >
+          登 录
+        </el-button>
+      </el-form-item>
+    </el-form>
+  </div>
+
+  <div v-if="comp=='button'">
+    <el-button @click="showDialog=true">
+      open
+    </el-button>
+    <el-dialog v-if="showDialog">
+      <iframe
+        src="//player.bilibili.com/player.html?aid=673762230&bvid=BV1pU4y1G7VX&cid=358701287&page=1"
+        scrolling="no"
+        border="0"
+        frameborder="no"
+        framespacing="0"
+        allowfullscreen="true"
+      />
+      <el-button @click="showDialog=close">
+        close
+      </el-button>
+    </el-dialog>
+
+    <el-button type="primary">
+      按钮
+    </el-button>
+    <el-button type="success">
+      按钮
+    </el-button>
+    <el-button>按钮</el-button>
+    <el-button size="small">
+      按钮
+    </el-button>
+  </div>
+
+  <div v-if="comp=='container'">
     <el-container>
       <el-header>Header</el-header>
       <el-main>Main</el-main>
       <el-footer>Footer</el-footer>
     </el-container>
-  </el-container>
+    <hr>
+
+    <el-container>
+      <el-header>Header</el-header>
+      <el-container>
+        <el-aside width="200px">
+          Aside
+        </el-aside>
+        <el-main>Main</el-main>
+      </el-container>
+    </el-container>
+    <hr>
+    <el-container>
+      <el-aside width="200px">
+        Aside
+      </el-aside>
+      <el-container>
+        <el-header>Header</el-header>
+        <el-main>Main</el-main>
+        <el-footer>Footer</el-footer>
+      </el-container>
+    </el-container>
+  </div>
 </template>
 <script setup lang="ts">
 import ElButton from './components/button/Button.vue'
+import ElDialog from './components/dialog/Dialog.vue'
+
+import {ref,reactive} from 'vue'
+const comp = ref('form')
+import {FormType} from './components/form/type'
+
+const compExamples = ref(['container','button','form','dialog','notification'])
+
+const showDialog = ref(false)
+
+const model = reactive({
+  username: "",
+  password: "",
+})
+
+const rules = reactive({
+  username: [
+    {
+      required: true,
+      message: "请输入用户名！",
+    },
+  ],
+  password: [
+    {
+      required: true,
+      message: "请输入密码！",
+    },
+  ],
+})
+
+// 获取表单实例
+const myForm = ref<FormType>()
+const login = () => {
+  myForm.value?.validate((isValid) => {
+    if (isValid) {
+      console.log(model)
+    } else {
+      alert("请正确填写表单！")
+    }
+  })
+}
+
 </script>
 <style>
 
