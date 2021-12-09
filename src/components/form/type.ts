@@ -1,4 +1,4 @@
-import { InjectionKey } from "@vue/runtime-core";
+import { InjectionKey } from "vue";
 import { Rules, Values } from "async-validator";
 
 export type FormData = {
