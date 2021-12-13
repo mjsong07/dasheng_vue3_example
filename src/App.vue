@@ -58,7 +58,7 @@
         framespacing="0"
         allowfullscreen="true"
       />
-      <el-button @click="showDialog=close">
+      <el-button @click="showDialog=false">
         close
       </el-button>
     </el-dialog>
@@ -115,7 +115,7 @@ import {FormType} from './components/form/type'
 
 const compExamples = ref(['container','button','form','dialog','notification'])
 
-const showDialog = ref(false)
+const showDialog = ref<boolean>(false)
 
 const model = reactive({
   username: "",

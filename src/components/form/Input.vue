@@ -23,7 +23,7 @@ const emit = defineEmits<{
   (e: "update:model-value", value: string): void
 }>()
 
-function onInput(e: InputEvent) {
+function onInput(e: Event) {
   const input = e.target as HTMLInputElement
   emit("update:model-value", input.value)
   emitter.emit("validate")

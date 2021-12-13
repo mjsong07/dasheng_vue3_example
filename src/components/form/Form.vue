@@ -24,7 +24,7 @@ const props = defineProps({
 
 provide(key, {
   model: props.model,
-  rules?: props.rules,
+  rules: props.rules,
 })
 
 const items = ref<FormItem[]>([])
