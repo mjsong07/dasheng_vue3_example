@@ -14,18 +14,15 @@
     </p>
   </div>
 </template>
-<script lang="ts">
-export default{
-  name:'ElFormItem'
-}
-</script>
 
 <script setup lang="ts">
 import Schema from "async-validator"
 import { onMounted, ref, inject } from "vue"
 import { FormItem, key } from "./type"
 import { emitter } from "../../emitter"
-
+defineOptions({
+  name: 'ElFormItem'
+})
 interface Props {
   label?: string
   prop?: string

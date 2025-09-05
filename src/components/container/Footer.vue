@@ -7,15 +7,11 @@
   </footer>
 </template>
 
-<script lang="ts">
-export default{
-  name:'ElFooter'
-}
-</script>
-
 <script setup lang="ts">
 import { withDefaults } from 'vue'
-
+defineOptions({
+  name: 'ElFooter'
+})
 interface Props {
   height?:string
 }

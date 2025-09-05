@@ -2,13 +2,7 @@
   <div class="el-form">
     <slot />
   </div>
-</template>
-<script lang="ts">
-export default{
-  name:'ElForm'
-}
-
-</script>
+</template> 
 
 <script setup lang="ts">
 import { PropType, provide } from "vue"
@@ -16,7 +10,9 @@ import { Rules } from "async-validator"
 import { ref } from "vue"
 import { emitter } from "../../emitter"
 import { FormItem, key } from "./type"
-
+defineOptions({
+  name: 'ElForm'
+})
 const props = defineProps({
   model: { type: Object, required: true },
   rules: { type: Object as PropType<Rules> },

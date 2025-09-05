@@ -7,14 +7,11 @@
   </header>
 </template>
 
-<script lang="ts">
-export default{
-  name:'ElHeader'
-}
-</script>
 <script setup lang="ts">
 import {withDefaults} from 'vue'
-
+defineOptions({
+  name: 'ElHeader'
+})
 interface Props {
   height?:string
 }

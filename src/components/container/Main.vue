@@ -4,13 +4,11 @@
   </main>
 </template>
 
-<script lang="ts">
-export default{
-  name:'ElMain'
-}
-</script>
 
 <script setup lang="ts">
+defineOptions({
+  name: 'ElHeader'
+})
 </script>
 <style lang="scss">
 @import '../styles/mixin';

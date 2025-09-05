@@ -9,14 +9,11 @@
     <slot />
   </aside>
 </template>
-<script lang="ts">
-export default{
-  name:'ElAside'
-}
-</script>
 <script setup lang="ts">
 import {withDefaults} from 'vue'
-
+defineOptions({
+  name: 'ElAside'
+})
 type PropValues = {
   width:string
 }

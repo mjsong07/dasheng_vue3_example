@@ -12,7 +12,9 @@
 </template>
 <script setup lang="ts">
 import { withDefaults } from 'vue';
-
+defineOptions({
+  name: 'ElDialog'
+})
 withDefaults(defineProps<{
     appendToBody?:boolean,
 }>(),{
@@ -20,11 +22,6 @@ withDefaults(defineProps<{
 })
 </script>
 
-<script lang="ts">
-export default{
-  name:'ElDialog'
-}
-</script>
 <style>
     .el-dialog{
         position: fixed;

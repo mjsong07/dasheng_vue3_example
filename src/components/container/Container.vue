@@ -8,16 +8,13 @@
   >
     <slot />
   </section> 
-</template>
-<script lang="ts">
-export default{
-  name:'ElContainer'
-}
-</script>
+</template> 
 <script setup lang="ts">
 
 import {useSlots,computed,VNode,Component} from 'vue'
-
+defineOptions({
+  name: 'ElContainer'
+})
 interface Props {
   direction?:string
 }

@@ -7,14 +7,12 @@
     >
   </div>
 </template>
-<script lang="ts">
-export default{
-  name:'ElInput'
-}
-</script>
-<script setup lang="ts">
-import { emitter } from "../../emitter"
 
+<script setup lang="ts">
+import { emitter } from "../../emitter" 
+defineOptions({
+  name: 'ElInput'
+})
 defineProps<{
   modelValue:string
 }>()
