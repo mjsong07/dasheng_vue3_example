@@ -3,20 +3,19 @@
     class="el-button" 
     :class="[
       buttonSize ? `el-button--${buttonSize}` : '',
-      type ? `el-button--${type}` : ''
+      props.type ? `el-button--${props.type}` : ''
     ]"
   >
     <slot />
   </button>
 </template>
 
-<script lang="ts">
-export default{
-  name:'ElButton'
-}
-</script>
 
 <script setup lang="ts">
+defineOptions({
+  name: 'ElButton'
+})
+
 
 import {computed, withDefaults} from 'vue'
 import { useGlobalConfig } from '../../util';
